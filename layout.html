@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Float 레이아웃 - 큰/작은 박스</title>
+<style>
+  * { margin:0; padding:0; box-sizing: border-box; }
+
+  #container {
+    width: 820px;
+    margin: 20px;
+    border: 1px solid black;
+    padding: 10px;
+  }
+
+  /* 큰 박스 */
+  .large {
+    width: 400px;
+    height: 100px;
+    background-color: #ff6666;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px;
+  }
+
+  /* 작은 박스 */
+  .small {
+    width: 200px;
+    height: 100px;
+    background-color: #66ccff;
+    float: left;
+    margin-right: 10px;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+  }
+
+  /* float 해제 */
+  .clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+</style>
+</head>
+<body>
+
+<h1>float 방법 레이아웃1</h1>
+<div id="container">
+  <!-- 첫 번째 큰 박스 -->
+  <div class="large">큰 박스 1</div>
+
+  <!-- 작은 박스 2개 -->
+  <div class="clearfix">
+    <div class="small">작은 박스 1</div>
+    <div class="small">작은 박스 2</div>
+  </div>
+
+  <!-- 두 번째 큰 박스 -->
+  <div class="large">큰 박스 2</div>
+</div>
+
+</body>
+</html>

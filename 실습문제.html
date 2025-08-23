@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>스타벅즈_실습하기</title>
+<style type="text/css">
+body {
+	background-image: url('img/background2.gif'); /* 배경 이미지 경로 지정 */
+}
+
+#allcontent {
+	width: 1600px;
+	}
+
+
+/* 1. 맨 위 고동색 header */
+#header {
+	background-color: #675c47;
+	height: 130px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start; /* 왼쪽부터 정렬 */
+  	padding-left: 20px; /* 살짝 여백 */
+  	margin-bottom: 10px;
+}
+
+#award {
+	position: relative;
+ 	left: -470px; 
+ 	bottom: -30px; 
+}
+
+#award:hover {
+  animation: rolypoly 1s ease-out forwards;
+  transform-origin: bottom center; /* 회전 중심을 아래쪽 */
+  cursor: pointer;
+}
+
+@keyframes rolypoly {
+  0%   { transform: rotate(0deg); }
+  20%  { transform: rotate(-20deg); }
+  40%  { transform: rotate(15deg); }
+  60%  { transform: rotate(-10deg); }
+  80%  { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* 2. 본문 */
+#main {
+	width: 1150px;
+	background-image: url('img/background.gif');
+	margin-bottom: 20px;
+	padding: 20px;
+	float: left;
+}
+
+/* 2-1. 오른쪽 본문 */
+#sidebar {
+	float: right;
+	width: 350px;
+	padding: 20px;
+	background-image: url('img/background.gif');
+}
+
+
+/* @ */
+#footer {
+  clear: both;
+  padding-top:20px;
+  padding-bottom:20px;
+  width: 1190px;
+  color: white;
+  text-align: center;
+  background-color: #675c47;
+}
+
+/* 사이드바와 푸터 사이 간격 추가 */
+#sidebar::after {
+  content: ""; /* 가상 요소 생성 */
+  display: block;
+  margin-top: 20px; /* 푸터와 사이드바 사이 간격 */
+  height: 0; /* 높이 0으로 간격만 생성 */
+}
+
+/* 쿠폰: 웹페이지 맨 왼쪽 중앙에 고정 */
+#coupon {
+  position: fixed;   
+  top:400px;   
+  left: -100px;              /* 화면 맨 왼쪽 */
+  
+  z-index: 1000;        /* 다른 요소 위에 표시 */
+}
+#coupon:hover {
+	left: 5px;
+}
+
+</style>
+</head>
+<body>
+<body>
+	<div id="allcontent">
+		<div id="header">
+			<img src="img/header.gif" alt="Starbuzz Coffee header image">
+			<div id="award">
+				<img src="img/award.gif" alt="Roaster of the Year award">
+			</div>
+		</div>
+		<div id="main">
+			<h1>QUALITY COFFEE, QUALITY CAFFEINE</h1>
+			<p>At Starbuzz Coffee, we are dedicated to filling all your
+				caffeine needs through our quality coffees and teas. Sure, we want
+				you to have a great cup of coffee and a great coffee experience as
+				well, but we're the only company that actively monitors and
+				optimizes caffeine levels. So stop by and fill your cup, or order
+				online with our new Bean Machine online order form, and get that
+				quality Starbuzz coffee that you know will meet your caffeine
+				standards.</p>
+			<p>
+				And, did we mention <em>caffeine</em>? We've just started funding
+				the guys doing all the wonderful research at the Caffeine Buzz. If
+				you want the latest on coffee and other caffeine products, stop by
+				and pay them a visit.
+			</p>
+			<h1>OUR STORY</h1>
+			<p>"A man, a plan, a coffee bean". Okay, that doesn't make a
+				palindrome, but it resulted in a damn good cup of coffee. Starbuzz's
+				CEO is that man, and you already know his plan: a Starbuzz on every
+				corner.</p>
+			<p>In only a few years he's executed that plan and today you can
+				enjoy Starbuzz just about anywhere. And, of course, the big news
+				this year is that Starbuzz teamed up with Head First readers to
+				create Starbuzz's Web presence, which is growing rapidly and helping
+				to meet the caffeine needs of a whole new set of customers.</p>
+			<h1>STARBUZZ COFFEE BEVERAGES</h1>
+			<p>We've got a variety of caffeinated beverages to choose from at
+				Starbuzz, including our House Blend, Mocha Cafe Latte, Cappuccino,
+				and a favorite of our customers, Chai Tea.</p>
+			<p>We also offer a variety of coffee beans, whole or ground, for
+				you to take home with you. Order your coffee today using our online
+				Bean Machine, and take the Starbuzz Coffee experience home.</p>
+		</div>
+		<div id="sidebar">
+			<p class="beanheading">
+				<img src="img/bag.gif" alt="Bean Machine bag"> <br> ORDER
+				ONLINE with the <a href="styledform.html">BEAN MACHINE</a> <br>
+				<span class="slogan"> FAST <br> FRESH <br> TO YOUR
+					DOOR <br>
+				</span>
+			</p>
+			<p>Why wait? You can order all our fine coffees right from the
+				Internet with our new, automated Bean Machine. How does it work?
+				Just click on the Bean Machine link, enter your order, and behind
+				the scenes, your coffee is roasted, ground (if you want), packaged,
+				and shipped to your door.</p>
+		</div>
+		<div id="footer">
+			© 2005, Starbuzz Coffee <br> All trademarks and registered
+			trademarks appearing on this site are the property of their
+			respective owners.
+		</div>
+		<div id="coupon">
+			<a href="" title="Click here to get your free coffee"> 
+			<img src="img/ticket.gif" alt="Starbuzz coupon ticket">
+			</a>
+		</div>
+		
+	</div>
+
+
+</body>
+</body>
+</html>

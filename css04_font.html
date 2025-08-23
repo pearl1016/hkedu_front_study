@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css04_font.html</title>
+<style type="text/css">
+.c {
+	font-size: 20px;
+	font-weight: bold;
+	font-style: italic;
+	font-variant: small-caps;
+	line-height: 50px;
+	font-family: "맑은 고딕 굴림";
+}
+
+.d {
+	font-variant: small-caps;
+}
+
+h1 {
+	background-color: yellow;
+	height: 100px;
+	text-align: center;
+	/*td요소, img등 특정요소만 적용됨*/
+	/*vertical-align:middle;*/
+	line-height: 100px; /*행이 하나일때만 위 아래 정렬 가능*/
+}
+/*
+축약형 사용할 때 순서 규칙
+1.font:[font-weight / font-style/ font-variant]
+2. font: [font-size / line-height]
+3. font: [font-family]
+font: 1,2,3 순으로 작성해야 함
+*/
+.d{
+font:bold italic small-caps 2-px/5-px '맑은 고딕';
+}
+</style>
+</head>
+<body>
+<h1>폰트 관련 속성</h1>
+	<p class="c">흥흥민민흥민민민흥흥민흥민흥민민흥흥흥흥민</p>
+	<p class="d">흥흥민민흥민민민흥흥민흥민흥민민흥흥흥흥민</p>
+
+</body>
+</html>
